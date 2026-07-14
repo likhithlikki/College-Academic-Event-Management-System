@@ -15,7 +15,7 @@
    ========================================================================== */
 
 // Replace with your deployed Google Apps Script Web App URL.
-const API_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+const API_URL = "https://script.google.com/macros/s/AKfycbxe2mbwDle6sOvhTVxk3CnDatki6GfyEW9AdtyvMwd2I3pq_2k4s1HQfAtMzM9vlkYp/exec";
 
 // Local state, kept as the single source of truth for the current session.
 const state = {
