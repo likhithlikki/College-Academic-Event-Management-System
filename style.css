@@ -1,0 +1,522 @@
+/* =========================================================
+   CampusHub - style.css
+   Simple CSS for College Event Management System
+   ========================================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ---------- HEADER ---------- */
+#site-header {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo-placeholder {
+  background-color: white;
+  color: #003366;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+#site-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+#global-search {
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+}
+
+#main-nav a,
+#main-nav button {
+  color: white;
+  background: none;
+  border: none;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+#login-btn {
+  background-color: orange;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ---------- HERO SECTION ---------- */
+#hero {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#hero h1 {
+  font-size: 28px;
+}
+
+#hero p {
+  margin: 10px 0;
+}
+
+#hero-search-form {
+  margin: 15px 0;
+}
+
+#hero-search-input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+#hero-search-form button {
+  padding: 8px 15px;
+  border: none;
+  background-color: orange;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#quick-categories {
+  margin-top: 15px;
+}
+
+.quick-cat-btn {
+  background-color: white;
+  color: #004aad;
+  border: none;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* ---------- MAIN SECTIONS ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-left: 4px solid #004aad;
+  padding-left: 8px;
+}
+
+/* ---------- DASHBOARD CARDS ---------- */
+#dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dash-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+  min-width: 130px;
+}
+
+.dash-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #004aad;
+}
+
+.dash-label {
+  font-size: 14px;
+  color: gray;
+}
+
+/* ---------- CATEGORY GRID ---------- */
+#category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #004aad;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.category-item.active {
+  background-color: #dceeff;
+  border-color: #004aad;
+}
+
+/* ---------- EVENT CARDS ---------- */
+#latest-events-grid,
+#upcoming-events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.event-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 280px;
+  overflow: hidden;
+}
+
+.event-card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+.event-card-body {
+  padding: 10px;
+}
+
+.event-card-badge {
+  background-color: #004aad;
+  color: white;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.event-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0 4px;
+  color: #003366;
+}
+
+.event-card-meta {
+  font-size: 13px;
+  color: #555;
+}
+
+.view-details-btn {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* ---------- NOTICES ---------- */
+#notices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notice-item {
+  background-color: white;
+  border-left: 4px solid orange;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notice-date {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ---------- LOADING / EMPTY MESSAGES ---------- */
+.state-msg {
+  text-align: center;
+  color: gray;
+  padding: 20px;
+  font-style: italic;
+}
+
+.state-msg.error {
+  color: red;
+}
+
+/* ---------- MODAL (EVENT DETAILS) ---------- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.modal-banner {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.detail-row {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.detail-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.modal-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modal-actions button,
+.modal-actions a {
+  background-color: #004aad;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* ---------- ADMIN PANEL ---------- */
+#admin-panel {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  overflow-y: auto;
+}
+
+#admin-panel.open {
+  display: block;
+}
+
+#admin-header {
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#admin-body {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.admin-tab-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.admin-tab-btn.active {
+  background-color: #004aad;
+  color: white;
+}
+
+.admin-section {
+  display: none;
+}
+
+.admin-section.active {
+  display: block;
+}
+
+#admin-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+table#events-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+table#events-table th,
+table#events-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 13px;
+  text-align: left;
+}
+
+table#events-table th {
+  background-color: #003366;
+  color: white;
+}
+
+.table-action-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  margin-right: 5px;
+}
+
+.edit-btn {
+  background-color: green;
+}
+
+.delete-btn {
+  background-color: red;
+}
+
+/* ---------- FORMS ---------- */
+form.app-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+form.app-form div {
+  flex: 1;
+  min-width: 200px;
+}
+
+form.app-form .full-width {
+  flex-basis: 100%;
+}
+
+form.app-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+form.app-form input,
+form.app-form select,
+form.app-form textarea {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form.app-form textarea {
+  min-height: 70px;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox-field input {
+  width: auto;
+}
+
+form.app-form button[type="submit"] {
+  flex-basis: 100%;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 13px;
+}
